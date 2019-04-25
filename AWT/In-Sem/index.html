@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="app_name">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="main.js"></script>
+    <div ng-controller='ctrl1'>
+        <span> Navrachana University </span><br>
+        ID<input type="text" ng-model='id' /><br>
+        Name<input type="text" ng-model= 'name' /><br>
+        Program<input type="text" ng-model = 'program' /><br>
+        Sub1<input type="text" ng-model = 'sub1' /><br>
+        Sub2<input type="text" ng-model = 'sub2' /><br>
+        Sub3<input type="text" ng-model = 'sub3' /><br>
+        Sub4<input type="text" ng-model = 'sub4' /><br>
+        Sub5<input type="text" ng-model = 'sub5' /><br>
+        <button ng-click = 'updateValue()'>Display Result</button>
+        <br><br>
+        
+
+        <table border='1px'>
+                <tr>
+                    <td>ID</td>
+                    <td>{{id1}}</td>    
+                </tr>
+                <tr>
+                        <td>Name</td>
+                        <td>{{name1}}</td>    
+                    </tr>
+                    <tr>
+                            <td>Program</td>
+                            <td width = '330px'>{{prog1}}</td>    
+                        </tr>
+                        <tr>
+                                <td>Total </td>
+                                <td>{{cal}}</td>    
+                            </tr>
+                            <tr>
+                                    <td>Result</td>
+                                    <td>{{result2}}</td>    
+                                </tr> 
+                            <tr>
+                                <td>Grade</td>
+                                <td>{{grade}}</td>    
+
+                            </tr>           
+            </table>
+
+    </div>
+
+</body>
+</html>
