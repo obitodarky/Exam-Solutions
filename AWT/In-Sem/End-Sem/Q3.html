@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.0.min.js"
+			  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+              crossorigin="anonymous"></script>
+    
+    <style>
+    .flippy>img {
+        /**/-moz-transform:scale(1,1);-webkit-transform:scale(1,1);
+        transform:scale(1,1);
+        /**/-webkit-transition:all 600ms ease;-webkit-transition:all 600ms ease;
+        transition:all 600ms ease; }
+    .flippy:hover>img {
+        /**/-moz-transform:scale(-1,1);-webkit-transform:scale(-1,1);
+        transform:scale(-1,1); }
+                 
+    </style>            
+    <script>
+    
+        $('flippy').mouseover(function(){
+            $(this).addClass('flippy');
+        }).mouseleave(function(){
+            $(this).removeClass('flippy');
+        });
+    
+
+    </script> 
+           
+</head>
+<body>
+
+        <div class="images">
+               <div class="flippy"style="width=100px; height=100px;"> 
+                <img class="flippy" src="php.png"/>
+                </div>
+                <br><br><br>
+                <div class="flippy">
+                        <img src="spring.png"/>
+                </div> 
+
+                <div class="flippy">
+                        <img src="jquery.png"/>
+                </div> 
+                <br><br><br>
+                <div class="flippy">
+                        <img src="ios.png"/>
+                </div> 
+                <br><br><br>
+                <div class="flippy">
+                        <img src="joomla.png"/>
+                </div> 
+                <br><br><br>
+                <div class="flippy">
+                        <img src="android.png"/>
+                </div> 
+        </div>
+         
+        
+
+        
+
+</body>
+
+
+</html>

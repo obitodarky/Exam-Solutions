@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+
+</head>
+
+
+<body >
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<div ng-app="app_name">
+
+        <div ng-controller="ctrl1">
+                <ul ng-repeat="student in myArray">
+                    <li>{{student.sno}}</li>
+                    <li>{{student.sname}}</li>
+                    <li>{{student.cname}}</li>
+                    <li>{{student.cincharge}}</li>
+                </ul>
+            </div> 
+</div>
+<script>
+    var app_name = angular.module('app_name', []);
+        
+    app_name.controller('ctrl1', function($scope,$http){    
+        
+       function init(){ 
+        $scope.myArray = [];
+        $http.get("http://webslingers.in/exam/showDetails.php?courseid=IT212").then(function (response) {
+            $scope.myArray = response;
+        });
+           
+       }
+        function errorCallback(response) {
+            alert(response);
+        }    
+    });
+
+    
+
+</script>
